@@ -15,7 +15,10 @@ public class Banco {
         this.saldo = valor;
     }
 
-    public double deposito(double valor){
+    public double deposito(double valor) throws ValorNegativo{
+        if(valor < 0){
+            throw new ValorNegativo();
+        }
         setSaldo(getSaldo() + valor);
         return getSaldo();
     }
