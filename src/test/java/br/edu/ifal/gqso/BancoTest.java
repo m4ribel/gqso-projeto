@@ -26,7 +26,7 @@ public class BancoTest {
 
     @Test
     public void saldoTest(){
-        
+        assertEquals(100, banco.saldo());
     }
 
 }
