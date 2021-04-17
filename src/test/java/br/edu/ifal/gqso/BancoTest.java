@@ -24,4 +24,9 @@ public class BancoTest {
         assertThrows(Banco.ValorNegativo.class, () -> banco.deposito(-100));
     }
 
+    @Test
+    public void saldoTest(){
+        
+    }
+
 }
