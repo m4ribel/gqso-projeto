@@ -8,7 +8,7 @@ public class Banco {
     }
 
     public double saldo() {
-        return 0;
+        return this.saldo;
     }
 
     public void setSaldo(double valor) {
