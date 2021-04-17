@@ -31,7 +31,7 @@ public class BancoTest {
 
     @Test
     public void saqueTest() {
-
+        assertEquals(50, banco.saque(50));
     }
 
 }
