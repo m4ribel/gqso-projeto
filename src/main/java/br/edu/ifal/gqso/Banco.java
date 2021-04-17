@@ -7,8 +7,8 @@ public class Banco {
         private static final long serialVersionUID = 1L;
     }
 
-    public double getSaldo() {
-        return this.saldo;
+    public double saldo() {
+        return 0;
     }
 
     public void setSaldo(double valor) {
@@ -19,7 +19,7 @@ public class Banco {
         if(valor < 0){
             throw new ValorNegativo();
         }
-        setSaldo(getSaldo() + valor);
-        return getSaldo();
+        setSaldo(saldo() + valor);
+        return saldo();
     }
 }
