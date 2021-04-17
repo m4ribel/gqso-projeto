@@ -6,7 +6,10 @@ public class Banco {
     public class ValorNegativo extends Exception{
         private static final long serialVersionUID = 1L;
     }
-
+    public class SaldoInsuficiente extends Exception{
+        private static final long serialVersionUID = 1L;
+    }
+    
     public double saldo() {
         return this.saldo;
     }
