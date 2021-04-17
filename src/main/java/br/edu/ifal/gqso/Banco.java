@@ -12,6 +12,7 @@ public class Banco {
     }
 
     public double deposito(double valor){
-        return 0;
+        setSaldo(getSaldo() + valor);
+        return getSaldo();
     }
 }
