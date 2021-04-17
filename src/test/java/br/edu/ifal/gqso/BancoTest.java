@@ -30,8 +30,9 @@ public class BancoTest {
     }
 
     @Test
-    public void saqueTest() {
+    public void saqueTest() throws ValorNegativo{
         assertEquals(50, banco.saque(50));
+        assertThrows(Banco.ValorNegativo.class, () -> banco.saque(-50));
     }
 
 }

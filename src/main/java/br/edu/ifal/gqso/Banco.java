@@ -23,7 +23,10 @@ public class Banco {
         return saldo();
     }
 
-    public double saque(double valor){
+    public double saque(double valor) throws ValorNegativo{
+        if(valor < 0){
+            throw new ValorNegativo();
+        }
         setSaldo(saldo() - valor);
         return saldo();
     }
