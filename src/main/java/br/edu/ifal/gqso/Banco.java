@@ -9,7 +9,7 @@ public class Banco {
     public class SaldoInsuficiente extends Exception{
         private static final long serialVersionUID = 1L;
     }
-    
+
     public double saldo() {
         return this.saldo;
     }
@@ -26,9 +26,12 @@ public class Banco {
         return saldo();
     }
 
-    public double saque(double valor) throws ValorNegativo{
+    public double saque(double valor) throws ValorNegativo, SaldoInsuficiente{
         if(valor < 0){
             throw new ValorNegativo();
+        }
+        if(valor > saldo()) {
+            throw new SaldoInsuficiente();
         }
         setSaldo(saldo() - valor);
         return saldo();
