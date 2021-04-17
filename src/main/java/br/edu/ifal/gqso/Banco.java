@@ -22,4 +22,9 @@ public class Banco {
         setSaldo(saldo() + valor);
         return saldo();
     }
+    
+    public double saque(double valor){
+        setSaldo(saldo() - valor);
+        return 0;
+    }
 }
